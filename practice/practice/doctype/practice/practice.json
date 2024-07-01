@@ -1,0 +1,109 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "practice.######",
+ "creation": "2024-02-29 13:01:13.280968",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "first_name",
+  "last_name",
+  "personal",
+  "column_break_3k2sv",
+  "full_name",
+  "employee",
+  "amended_from",
+  "section_break_wjee9",
+  "family"
+ ],
+ "fields": [
+  {
+   "default": "HHH",
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "label": "First Name"
+  },
+  {
+   "description": "hello world",
+   "documentation_url": "www.google.com",
+   "fetch_from": "employee.employee_name",
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "label": "Last Name",
+   "mandatory_depends_on": "first_name"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Practice",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "family",
+   "fieldtype": "Table",
+   "label": "Family",
+   "options": "Family Members"
+  },
+  {
+   "fetch_from": "employee.designation",
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "label": "Full Name"
+  },
+  {
+   "fieldname": "column_break_3k2sv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_wjee9",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "label": "Employee",
+   "options": "Nextash Employee"
+  },
+  {
+   "fieldname": "personal",
+   "fieldtype": "Link",
+   "label": "Personal",
+   "options": "Personal"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-03-11 11:29:11.413243",
+ "modified_by": "Administrator",
+ "module": "Practice",
+ "name": "Practice",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}
