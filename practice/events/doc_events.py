@@ -22,3 +22,17 @@ def send_email_on_creation(doc , method= None):
         send_email=True,
         sender=sender
     )
+
+def send_hourly_email():
+    # Function to send hourly email
+    from_email = "shinzaaslam@gmail.com"
+    to_email = "7ahmed8raza6@gmail.com"
+    subject = "Hourly Update"
+    message = "This is your hourly update email."
+
+    # Implement email sending logic here
+
+    print("Hourly email sent.")
+
+# Now, you can schedule this function to run every hour
+schedule.every().hour.do(send_hourly_email)
